@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ProtectedRoute from './components/ProtectedRoute'
 import { StoreProvider } from './context/StoreContext'
@@ -42,9 +42,9 @@ function AppShell() {
 export default function App() {
   return (
     <StoreProvider>
-      <BrowserRouter>
+      <HashRouter>
         <AppShell />
-      </BrowserRouter>
+      </HashRouter>
     </StoreProvider>
   )
 }
